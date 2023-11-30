@@ -2,6 +2,8 @@ package com.example.project;
 
 import android.content.ContentValues;
 
+import java.util.Random;
+
 public class Meal {
     private String location;
     private String foodName;
@@ -10,6 +12,8 @@ public class Meal {
     private String time;
     private double cost;
     private String date;
+
+    private int calorie;
 
     private String imagePath;
 
@@ -77,6 +81,11 @@ public class Meal {
         return date;
     }
 
+    public void setCalorie(int calorie) {
+        this.calorie = calorie;
+    }
+
+
     public ContentValues getContentValues() {
         ContentValues contentValues = new ContentValues();
         contentValues.put(MyContentProvider.LOCATION, location);
@@ -87,6 +96,7 @@ public class Meal {
         contentValues.put(MyContentProvider.COST, cost);
         contentValues.put(MyContentProvider.DATE, date);
         contentValues.put(MyContentProvider.IMAGE_PATH, imagePath);
+        contentValues.put(MyContentProvider.CALORIE, calorie);
 
         return contentValues;
     }

@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    private void openMealInputActivity() {
-        Intent intent = new Intent(this, .class);
+    private void openLocationSelect() {
+        Intent intent = new Intent(this, activity_location_select.class);
         startActivity(intent);
     }
 
