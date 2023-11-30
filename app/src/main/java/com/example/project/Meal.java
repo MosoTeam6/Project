@@ -12,7 +12,6 @@ public class Meal {
     private String time;
     private double cost;
     private String date;
-
     private int calorie;
 
     private String imagePath;
