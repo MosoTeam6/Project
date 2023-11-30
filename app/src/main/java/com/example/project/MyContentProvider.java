@@ -18,6 +18,8 @@ public class MyContentProvider extends ContentProvider {
     static final String COST = "cost";
     static final String DATE = "date";
     static final String IMAGE_PATH = "imagePath";
+
+    static final String CALORIE = "calorie";
     static final Uri CONTENT_URI = Uri.parse(URL);
 
     private MealDatabaseHelper dbManager;

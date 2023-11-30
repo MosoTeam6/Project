@@ -25,6 +25,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Random;
 
 public class MealInputActivity extends AppCompatActivity {
 
@@ -103,13 +104,15 @@ public class MealInputActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 dispatchTakePictureIntent();
             } else {
-                Toast.makeText(this, "Camera permission denied", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        this, "Camera permission denied", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -189,6 +192,7 @@ public class MealInputActivity extends AppCompatActivity {
     }
 
     private void saveMeal() {
+        Random random = new Random();
         String location = locationEditText.getText().toString();
         String foodName = foodNameEditText.getText().toString();
         String sideDish = sideDishEditText.getText().toString();
@@ -206,6 +210,8 @@ public class MealInputActivity extends AppCompatActivity {
         meal.setCost(cost);
         meal.setDate(date);
         meal.setImagePath(imagePath);
+        meal.setCalorie(random.nextInt(400)+800);
+
 
         MealDatabaseHelper databaseHelper = new MealDatabaseHelper(this);
         databaseHelper.addMeal(meal);
