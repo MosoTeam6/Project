@@ -50,12 +50,12 @@ public class MealInputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_meal_input);
 
         locationEditText = findViewById(R.id.editTextLocation);
-        foodNameEditText = findViewById(R.id.editTextFoodName);
+        foodNameEditText = findViewById(R.id.editTextTime);
         sideDishEditText = findViewById(R.id.editTextSideDish);
         impressionEditText = findViewById(R.id.editTextImpression);
         timeEditText = findViewById(R.id.editTextTime);
         costEditText = findViewById(R.id.editTextCost);
-        dateEditText = findViewById(R.id.editTextDate);
+        dateEditText = findViewById(R.id.editTextTime);
         imagePathEditText = findViewById(R.id.editTextImagePath);
 
         mealImageView = findViewById(R.id.imageViewMeal);
