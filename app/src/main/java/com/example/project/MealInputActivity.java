@@ -60,7 +60,7 @@ public class MealInputActivity extends AppCompatActivity {
 
         mealImageView = findViewById(R.id.imageViewMeal);
 
-        Button saveButton = findViewById(R.id.buttonSave);
+        Button saveButton = findViewById(R.id.buttonSave);//사진 업로드
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +88,7 @@ public class MealInputActivity extends AppCompatActivity {
     }
 
     private void checkCameraPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {//버전 비교
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                     != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
