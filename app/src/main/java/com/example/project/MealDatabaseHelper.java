@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-// MealDatabaseHelper.java
 public class MealDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "meal_database";
     private static final int DATABASE_VERSION = 1;
@@ -88,5 +87,4 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    // 추가적으로 데이터베이스 조작을 위한 메서드 추가
 }

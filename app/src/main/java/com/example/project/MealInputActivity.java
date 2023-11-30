@@ -84,7 +84,7 @@ public class MealInputActivity extends AppCompatActivity {
             }
         });
 
-        meal = new Meal(); // Initialize Meal object
+        meal = new Meal();
     }
 
     private void checkCameraPermission() {
@@ -143,7 +143,6 @@ public class MealInputActivity extends AppCompatActivity {
                 Uri selectedImageUri = data.getData();
                 mealImageView.setImageURI(selectedImageUri);
 
-                // Save image to file and set file path
                 String imagePath = saveImageToFile(selectedImageUri);
                 meal.setImagePath(imagePath);
             }
