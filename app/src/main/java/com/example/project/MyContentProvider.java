@@ -56,7 +56,8 @@ public class MyContentProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
         // TODO: Implement this to handle query requests from clients.
-        return dbManager.query(projection, selection, selectionArgs, null, null, sortOrder);
+        return dbManager.query(
+                projection, selection, selectionArgs, null, null, sortOrder);
     }
 
     @Override
