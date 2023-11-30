@@ -9,7 +9,7 @@ android:orientation="vertical"
 tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:gravity="center"
@@ -26,48 +26,45 @@ tools:context=".MainActivity">
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:background="@drawable/button_shape"
-        android:text="Button"
+        android:text="@string/btn3"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
-<Button
-    android:id="@+id/btn2"
+    <Button
+        android:id="@+id/btn2"
 
-    android:layout_width="wrap_content"
-    android:layout_height="60dp"
-    android:layout_gravity="center"
-    android:layout_margin="10dp"
-    android:background="@drawable/button_shape"
-    android:text="Button"
-    android:textColor="#FFFFFF"
-    android:textSize="30sp"
-    />
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/btn2"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
-<Button
-    android:id="@+id/btn3"
+    <Button
+        android:id="@+id/btn3"
 
-    android:layout_width="wrap_content"
-    android:layout_height="60dp"
-    android:layout_gravity="center"
-    android:layout_margin="10dp"
-    android:background="@drawable/button_shape"
-    android:text="Button"
-    android:textColor="#FFFFFF"
-    android:textSize="30sp"
-    />
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/btn1"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
-<Button
-    android:id="@+id/btn4"
+    <Button
+        android:id="@+id/btn4"
 
-    android:layout_width="wrap_content"
-    android:layout_height="60dp"
-    android:layout_gravity="center"
-    android:layout_margin="10dp"
-    android:background="@drawable/button_shape"
-    android:text="Button"
-    android:textColor="#FFFFFF"
-    android:textSize="30sp"
-    />
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/btn4"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/btn5"
@@ -77,7 +74,7 @@ tools:context=".MainActivity">
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:background="@drawable/button_shape"
-        android:text="Button"
+        android:text="@string/btn5"
         android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
