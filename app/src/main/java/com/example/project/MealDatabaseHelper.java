@@ -58,7 +58,8 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public long insert(ContentValues meal) {
-        return getWritableDatabase().insert(TABLE_MEALS, null, meal.getContentValues());
+        return getWritableDatabase().insert(
+                TABLE_MEALS, null, meal);
     }
 
     public int delete(String selection, String[] selectionArgs) {
@@ -66,11 +67,14 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int update(Meal meal, String selection, String[] selectionArgs) {
-        return getWritableDatabase().update(TABLE_MEALS, meal.getContentValues(), selection, selectionArgs);
+        return getWritableDatabase().update(
+                TABLE_MEALS, meal.getContentValues(), selection, selectionArgs);
     }
 
-    public Cursor query(String[] projection, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
-        return getReadableDatabase().query(TABLE_MEALS, projection, selection, selectionArgs, groupBy, having, orderBy);
+    public Cursor query(String[] projection, String selection,
+                        String[] selectionArgs, String groupBy, String having, String orderBy) {
+        return getReadableDatabase().query(
+                TABLE_MEALS, projection, selection, selectionArgs, groupBy, having, orderBy);
     }
 
     public void addMeal(Meal meal) {
