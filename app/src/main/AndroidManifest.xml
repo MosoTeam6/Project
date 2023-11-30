@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.example.project.MyContentProvider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
+        <activity
+            android:name=".MealInputActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
