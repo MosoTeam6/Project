@@ -84,6 +84,10 @@ public class Meal {
         this.calorie = calorie;
     }
 
+    public int getCalorie() {
+        return calorie;
+    }
+
 
     public ContentValues getContentValues() {
         ContentValues contentValues = new ContentValues();
