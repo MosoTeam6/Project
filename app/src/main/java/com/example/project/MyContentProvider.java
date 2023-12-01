@@ -18,6 +18,8 @@ public class MyContentProvider extends ContentProvider {
     static final String COST = "cost";
     static final String DATE = "date";
     static final String IMAGE_PATH = "imagePath";
+
+    static final String CALORIE = "calorie";
     static final Uri CONTENT_URI = Uri.parse(URL);
 
     private MealDatabaseHelper dbManager;
@@ -56,7 +58,8 @@ public class MyContentProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
         // TODO: Implement this to handle query requests from clients.
-        return dbManager.query(projection, selection, selectionArgs, null, null, sortOrder);
+        return dbManager.query(
+                projection, selection, selectionArgs, null, null, sortOrder);
     }
 
     @Override

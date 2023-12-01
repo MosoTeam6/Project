@@ -19,6 +19,8 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_TIME = "time";
     private static final String COLUMN_COST = "cost";
     private static final String COLUMN_DATE = "date";
+    private static final String COLUMN_IMAGE_PATH = "imagePath";
+    private static final String COLUMN_CALORIE = "calorie";
 
     Context context = null;
 
@@ -31,7 +33,9 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_IMPRESSION + " TEXT," +
                     COLUMN_TIME + " TEXT," +
                     COLUMN_COST + " REAL," +
-                    COLUMN_DATE + " TEXT" +
+                    COLUMN_DATE + " TEXT," +
+                    COLUMN_IMAGE_PATH + " TEXT," +
+                    COLUMN_CALORIE + " INTEGER" +
                     ")";
 
     public static MealDatabaseHelper getInstance(Context context) {
@@ -58,7 +62,8 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public long insert(ContentValues meal) {
-        return getWritableDatabase().insert(TABLE_MEALS, null, meal.getContentValues());
+        return getWritableDatabase().insert(
+                TABLE_MEALS, null, meal);
     }
 
     public int delete(String selection, String[] selectionArgs) {
@@ -66,11 +71,14 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int update(Meal meal, String selection, String[] selectionArgs) {
-        return getWritableDatabase().update(TABLE_MEALS, meal.getContentValues(), selection, selectionArgs);
+        return getWritableDatabase().update(
+                TABLE_MEALS, meal.getContentValues(), selection, selectionArgs);
     }
 
-    public Cursor query(String[] projection, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
-        return getReadableDatabase().query(TABLE_MEALS, projection, selection, selectionArgs, groupBy, having, orderBy);
+    public Cursor query(String[] projection, String selection,
+                        String[] selectionArgs, String groupBy, String having, String orderBy) {
+        return getReadableDatabase().query(
+                TABLE_MEALS, projection, selection, selectionArgs, groupBy, having, orderBy);
     }
 
     public void addMeal(Meal meal) {
@@ -83,6 +91,8 @@ public class MealDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_TIME, meal.getTime());
         values.put(COLUMN_COST, meal.getCost());
         values.put(COLUMN_DATE, meal.getDate());
+        values.put(COLUMN_IMAGE_PATH, meal.getImagePath());
+        values.put(COLUMN_CALORIE, meal.getCalorie());
         db.insert(TABLE_MEALS, null, values);
         db.close();
     }
