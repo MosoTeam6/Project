@@ -1,10 +1,3 @@
 <resources>
-    <string name="app_name">Project</string>
-    <string name="inputActivityTitle">Add New Event</string>
-    <string name="btn1">상록원 1층</string>
-    <string name="btn2">상록원 2층</string>
-    <string name="btn3">상록원 3층</string>
-    <string name="btn4">남산학사</string>
-    <string name="btn5">카페</string>
-    <string name="createBtn">Create Event</string>
+    <string name="app_name">FoodInfo</string>
 </resources>
