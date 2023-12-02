@@ -1,31 +1,38 @@
 package com.example.project;
 
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
+import com.example.project.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+        com.example.project.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-    private void openLocationSelect() {
-        Intent intent = new Intent(this, activity_location_select.class);
-        startActivity(intent);
-    }
+        binding.seeMyMeel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyMeelActivity.class);
+                startActivity(intent);
+            }
+        });
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+        binding.analyzeMyMeel.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.P)
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AnalyzeFoodActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
 }
