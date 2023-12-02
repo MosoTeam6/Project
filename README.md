@@ -1,7 +1,7 @@
 # Project
 
 #build.gradle
-
+'''
 plugins {
 id("com.android.application")
 }
@@ -56,17 +56,10 @@ implementation("androidx.room:room-ktx:2.6.1")
 annotationProcessor("androidx.room:room-compiler:2.6.1")
 implementation ("com.prolificinteractive:material-calendarview:1.4.3")
 }
-
+'''
 #gradle.properties
 
-# Project-wide Gradle settings.
-# IDE (e.g. Android Studio) users:
-# Gradle settings configured through the IDE *will override*
-# any settings specified in this file.
-# For more details on how to configure your build environment visit
-# http://www.gradle.org/docs/current/userguide/build_environment.html
-# Specifies the JVM arguments used for the daemon process.
-# The setting is particularly useful for tweaking memory settings.
+'''
 org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
 # When configured, Gradle will run in incubating parallel mode.
 # This option should only be used with decoupled projects. More details, visit
@@ -81,3 +74,5 @@ android.useAndroidX=true
 # thereby reducing the size of the R class for that library
 android.nonTransitiveRClass=true
 android.enableJetifier=true
+
+'''
