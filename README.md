@@ -1,6 +1,7 @@
 # Project
 
-#build.gradle
+##build.gradle
+
 ```
 plugins {
 id("com.android.application")
@@ -58,7 +59,7 @@ implementation ("com.prolificinteractive:material-calendarview:1.4.3")
 }
 ```
 
-#gradle.properties
+##gradle.properties
 
 ```
 org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
