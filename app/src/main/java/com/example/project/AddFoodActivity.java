@@ -335,8 +335,16 @@ public class AddFoodActivity extends AppCompatActivity {
         String month = String.valueOf(convertStringToMillisMonth(loadmonth));
         String review = binding.foodExplainInputEditText.getText().toString();
         int price = Integer.parseInt(binding.priceInputEditText.getText().toString());
-        int cal = (50 + (int) (Math.random() * 100));
+        int cal;
         int id = (int) (Math.random() * 100000);
+
+        if("음료".equals(typemeal)){
+            cal = 100 + (int) (Math.random() * 100);
+        }
+
+        else{
+            cal = 800 + (int) (Math.random() * 400);
+        }
 
         Food food = new Food(address, typemeal, uploaddate, uploaddatetime, month, foodname, bytemap, review, price, cal, id);
 
