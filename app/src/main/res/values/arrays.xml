@@ -3,8 +3,10 @@
     <string-array name="address">
         <item>상록원 3층</item>
         <item>상록원 2층 </item>
-        <item>상록원 2층</item>
-        <item>남삭학사</item>
-        <item>창수 집 맛집</item>
+        <item>상록원 1층</item>
+        <item>남산학사</item>
+        <item>가온누리</item>
+        <item>블루팟</item>
+        <item>남산학사 폴바셋</item>
     </string-array>
 </resources>
