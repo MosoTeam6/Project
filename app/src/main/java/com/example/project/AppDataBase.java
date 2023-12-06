@@ -22,8 +22,7 @@ public abstract class AppDataBase extends RoomDatabase {
                                     context.getApplicationContext(),
                                     AppDataBase.class,
                                     "app-database.db"
-                            ).fallbackToDestructiveMigration()
-                            .build();
+                            ).fallbackToDestructiveMigration().build();
                 }
             }
         }
