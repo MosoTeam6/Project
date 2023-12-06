@@ -1,6 +1,7 @@
-# Project
+# 2023-2학기 모바일 소프트웨어 Term Project
 
 Gradle(build.gradle (app))과 의존성 코드 정리
+
 Emulator API = 28 (PIE)
 
 ## build.gradle
@@ -72,3 +73,5 @@ android.nonTransitiveRClass=true
 android.enableJetifier=true
 
 ```
+
+### Member : 박창수, 신민규
