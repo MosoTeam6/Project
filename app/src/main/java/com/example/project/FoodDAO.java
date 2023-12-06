@@ -40,5 +40,7 @@ public interface FoodDAO {
 
     @Query("DELETE FROM foodinfo")
     void deleteAll();
+    @Query("DELETE FROM foodinfo WHERE id = :userId")
+    void deleteUserById(int userId);
 
 }

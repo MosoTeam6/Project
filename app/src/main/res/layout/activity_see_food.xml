@@ -2,111 +2,135 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SeeFoodActivity"
-    android:background="@drawable/testbackgroundtint">
+    android:background="@drawable/testbackgroundtint"
+    tools:context=".SeeFoodActivity">
 
 
     <ImageView
         android:id="@+id/seeFoodImage"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/roundbackground"
         android:scaleType="fitXY"
-        android:layout_height="300dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/seeFoodAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/seeFoodAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/seeFoodImage"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="306dp"
+        android:padding="15dp"
         android:text="장소 이름"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:padding="15dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/seeFoodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/seeFoodAddress"
-        app:layout_constraintStart_toStartOf="parent"
+        android:padding="15dp"
         android:text="음식 이름"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:padding="15dp"/>
+        app:layout_constraintStart_toStartOf="@+id/seeFoodAddress"
+        app:layout_constraintTop_toBottomOf="@+id/seeFoodAddress" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/seeFoodTypeMeal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/seeFoodName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/seeFoodName"/>
+        android:layout_marginStart="2dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/seeFoodName"
+        app:layout_constraintStart_toEndOf="@+id/seeFoodName" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seedatebox"
-        app:layout_constraintTop_toBottomOf="@+id/seeFoodImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:strokeColor="@color/grey"
-        app:strokeWidth="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="9dp"
-        >
-    <TextView
-        android:id="@+id/seedateText"
-        android:text="날짜"
-        android:gravity="left|center"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seeFoodImage"
+        app:strokeColor="@color/grey"
+        app:strokeWidth="1dp">
+
+        <TextView
+            android:id="@+id/seedateText"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="left|center"
+            android:padding="10dp"
+            android:text="날짜" />
     </com.google.android.material.card.MaterialCardView>
+
 
     <TextView
         android:id="@+id/seeFoodPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="가격"
-        app:layout_constraintTop_toBottomOf="@+id/seeFoodName"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="15dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/seeFoodKcal"
+        app:layout_constraintStart_toStartOf="@+id/seeFoodKcal" />
 
     <TextView
         android:id="@+id/seeFoodKcal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="30dp"
         android:text="칼로리"
-        app:layout_constraintTop_toBottomOf="@+id/seeFoodName"
-        app:layout_constraintStart_toEndOf="@+id/seeFoodPrice"
-        android:layout_marginStart="15dp"/>
-
+        app:layout_constraintBottom_toTopOf="@+id/seeFoodExplainbox"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/seeFoodExplainbox"
-       app:layout_constraintTop_toBottomOf="@+id/seeFoodKcal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:strokeColor="@color/grey"
-        app:strokeWidth="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="9dp"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seeFoodName"
+        app:strokeColor="@color/grey"
+        app:strokeWidth="1dp">
+
         <TextView
             android:id="@+id/seeFoodExplainText"
-            android:text="음식 설명"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
             android:gravity="left|top"
             android:padding="10dp"
+            android:text="음식 설명"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"/>
+            android:textSize="20sp" />
+
     </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFA07A"
+        android:text="삭제"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/seeFoodExplainbox"
+        app:layout_constraintTop_toBottomOf="@+id/seeFoodExplainbox" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
