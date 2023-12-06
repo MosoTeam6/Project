@@ -25,7 +25,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MyMeelActivity"
+            android:name=".MyMealActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
