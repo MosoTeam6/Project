@@ -1,5 +1,8 @@
 # Project
 
+Gradle(build.gradle (app))과 의존성 코드 정리
+Emulator API = 28 (PIE)
+
 ## build.gradle
 
 ```
