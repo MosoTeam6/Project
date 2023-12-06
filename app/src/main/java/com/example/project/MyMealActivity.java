@@ -31,7 +31,7 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 
-public class MyMeelActivity extends AppCompatActivity implements fooditemclick {
+public class MyMealActivity extends AppCompatActivity implements fooditemclick {
 
     private static final String TAG = "MyMeelActivity";
     private ActivityMyMeelBinding binding;
