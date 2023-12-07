@@ -38,7 +38,7 @@ public class SeeFoodActivity extends AppCompatActivity {
                     AppDataBase.getInstance(SeeFoodActivity.this).foodDao().deleteUserById(id);
                 }).start();
 
-                Intent intent = new Intent(getApplicationContext(), MyMeelActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MyMealActivity.class);
                 startActivity(intent);	//intent 에 명시된 액티비티로 이동
 
                 finish();	//현재 액티비티 종료
