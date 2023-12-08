@@ -27,16 +27,16 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addFoodButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_margin="30dp"
+        android:clickable="true"
+        app:backgroundTint="#FFA07A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        app:srcCompat="@drawable/food_icon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

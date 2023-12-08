@@ -1,13 +1,18 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project.databinding.ActivitySeeFoodBinding;
 
+import java.sql.SQLData;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -24,6 +29,21 @@ public class SeeFoodActivity extends AppCompatActivity {
         binding = ActivitySeeFoodBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        Button deleteButton = findViewById(R.id.deleteButton);
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = getIntent().getIntExtra("id", 0);
+                new Thread(()->{
+                    AppDataBase.getInstance(SeeFoodActivity.this).foodDao().deleteUserById(id);
+                }).start();
+
+                Intent intent = new Intent(getApplicationContext(), MyMealActivity.class);
+                startActivity(intent);	//intent 에 명시된 액티비티로 이동
+
+                finish();	//현재 액티비티 종료
+            }
+        });
         initview();
     }
 
@@ -54,4 +74,5 @@ public class SeeFoodActivity extends AppCompatActivity {
         calendar.setTimeInMillis(millis);
         return convert.format(calendar.getTime());
     }
+
 }
